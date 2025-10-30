@@ -1,0 +1,119 @@
+<style>
+    body {
+        background-image: url('img/layer-base.png');
+        background-size: cover;
+        min-height: 100vh;
+        font-family: 'Poppins', sans-serif;
+    }
+    nav {
+      background: rgba(20,20,40,0.88);
+      position: fixed; top:0; left:0; width:100%; z-index: 1000;
+      box-shadow: 0 2px 12px 0 rgba(23,23,45,0.09);
+    }
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+      padding: 18px 0 4px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none; color: #fff; padding: 9px 16px;
+      border-radius: 8px; transition: background 0.2s;
+      font-weight: 500;
+    }
+    nav ul li a:hover, nav ul li a.active { background: #ff2e63; }
+    .contact-section {
+      margin: 80px auto 0 auto;
+      max-width: 740px;
+      padding: 38px 16px;
+      background: rgba(23,23,36,0.73);
+      border-radius: 17px;
+      box-shadow: 0 8px 32px 0 #18122633;
+    }
+    .contact-section h1 { font-size: 2.1rem; color: #ff2e63; text-align: center; margin-bottom: 0;}
+    .contact-info {
+      margin: 30px 0 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 36px 20px;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.06rem;
+      text-align: center; 
+    }
+    .contact-info div { flex: 1 1 190px; }
+    .contact-info span { font-size: 1.33em; margin-right: 8px; color: #ff2e63;}
+    .contact-form {
+      background: rgba(255,255,255,0.08);
+      border-radius: 11px;
+      box-shadow: 0 2px 12px #2221  ;
+      padding: 28px 18px 18px 18px;
+      margin: 0 auto;
+      max-width: 370px;
+      color: #fff;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px 13px;
+      margin-bottom: 16px;
+      border: none;
+      border-radius: 5px;
+      background: #fff2;
+      color: #fff;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: box-shadow .2s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: none;
+      box-shadow: 0 0 9px #ff2e6387;
+      background: #fff4;
+    }
+    .contact-form button {
+      background: #ff2e63;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      padding: 10px 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .contact-form button:hover { background: #c10063; }
+    @media (max-width: 650px) {
+      .contact-section{padding: 15px 2px;}
+      .contact-info{flex-direction: column; gap:14px;}
+      .contact-form{padding:14px 4px;}
+    }
+</style>
+<body>
+  <nav>
+    <ul>
+      <li><a href="siginn.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="s1.html">Services</a></li>
+      <li><a href="c1.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="contact-section">
+    <h1>Contact Us</h1>
+    <div class="contact-info">
+      <div><span>📧</span>Email: <a href="mailto:info@sigmaa.com" style="color:#ff2e63;">info@sigmaa.com</a></div>
+      <div><span>📞</span>Phone: <a href="tel:+1234567890" style="color:#ff2e63;">+1 234 567 890</a></div>
+      <div><span>📍</span>Address: 123 Creative St, Innovation City, 12345</div>
+    </div>
+    <form class="contact-form" onsubmit="alert('Thank you for reaching out!'); return false;">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>

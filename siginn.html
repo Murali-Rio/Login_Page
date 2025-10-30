@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sigmaa | Home</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="libs/gsap/gsap.min.js" defer></script>
+  <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      background: linear-gradient(120deg,#1e1d1d 50%,#431e36 100%);
+      min-height: 100vh;
+    }
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0; left: 0;
+      background: rgba(18, 18, 24, 0.92);
+      z-index: 10;
+      box-shadow: 0 2px 12px 0 rgba(18,18,22,.09);
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0; padding: 20px 0 5px 0;
+      flex-wrap: wrap;
+    }
+    nav ul li { margin: 0 18px; }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 18px;
+      transition: background 0.2s;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    nav ul li a.active, nav ul li a:hover {
+      background: #ff2e63;
+      color: #fff;
+    }
+    .hero {
+      width: 100%;
+      min-height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background: url('img/layer-base.png'), linear-gradient(110deg,#080a14 30%,#431e36 100%);
+      background-blend-mode: screen;
+      background-size: cover;
+      background-position: center;
+      padding-top: 120px;
+      padding-bottom: 50px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: 2px;
+      text-shadow: 0 3px 32px #54002e33;
+    }
+    .hero p {
+      color: #ebe1e1;
+      font-size: 1.32rem;
+      margin-bottom: 32px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero .cta-btn {
+      display: inline-block;
+      background: #ff2e63;
+      color: #fff;
+      padding: 13px 38px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.13rem;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 20px #ff2e6340;
+      transition: transform .13s, background .3s;
+      text-decoration: none;
+    }
+    .hero .cta-btn:hover {
+      background: #c10063;
+      transform: scale(1.05);
+    }
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 46px;
+      padding: 38px 16px 0 16px;
+      max-width: 1020px;
+      margin: 0 auto 80px auto;
+      box-sizing: border-box;
+    }
+    .card {
+      flex: 1 1 340px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #0002;
+      padding: 32px 24px 24px;
+      min-width: 270px;
+      max-width: 410px;
+      text-align: center;
+      color: #fff;
+      transition: transform .12s, box-shadow .12s;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 8px 22px #321d2e44;
+      background: rgba(255,46,99,0.09);
+    }
+    .card h3 {
+      color: #ff2e63;
+      font-size: 1.33rem;
+      margin-bottom: 11px;
+      font-weight: bold;
+    }
+    .card p {
+      color: #f8e7e7;
+      font-size: 1rem;
+      margin-bottom: 17px;
+    }
+    .card .logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+    .card .action-btn {
+      margin-top: 12px;
+      background: #431e36;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .card .action-btn:hover {
+      background: #ff2e63;
+    }
+    @media (max-width: 880px) {
+      .main-content {
+        flex-direction: column;
+        gap: 26px;
+        align-items: center;
+      }
+      .hero h1 { font-size: 2.1rem; }
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 8px;
+      }
+      .hero h1 { font-size: 1.38rem; }
+      .hero { padding-top: 85px; }
+      .main-content { padding: 18px 3px; }
+      .card { padding: 18px 8px 16px; min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="siginn.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="s1.html">Services</a></li>
+      <li><a href="c1.html">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <h1>Welcome to Sigmaa<br>Where Creativity Meets Innovation</h1>
+    <p>Your journey starts here. Discover seamless, interactive experiences — whether you want to explore, log in, or join our amazing community.</p>
+    <a href="#main-content" class="cta-btn">Explore Now</a>
+  </section>
+  <div id="main-content" class="main-content">
+    <div class="card">
+      <div class="logo"><img src="img/logo.png" alt="Sigmaa Logo"></div>
+      <h3>Sign In to Your Account</h3>
+      <p>Access your dashboard with secure authentication and enjoy our latest features.</p>
+      <form onsubmit="return false;">
+        <div style="margin: 14px 0;">
+          <input type="email" placeholder="Email" required style="margin-bottom:8px; width:90%; max-width:260px; padding:10px;"/><br>
+          <input type="password" placeholder="Password" id="password" required style="width:90%; max-width:260px; padding:10px;"/>
+          <span class="eye-icon" onclick="togglePasswordVisibility()">👁️</span>
+        </div>
+        <button class="action-btn" type="submit">Sign In</button>
+      </form>
+      <div style="margin-top: 9px;">
+        <a href="regis.html" style="color:#ff2e63; text-decoration:underline;">New here? Sign Up!</a>
+      </div>
+      <a href="#" style="color:#bbb;font-size:0.95em;">Forgot password?</a>
+    </div>
+    <div class="card">
+      <h3>Who We Are</h3>
+      <p>Sigmaa is a creative platform built to empower users by combining technology, innovation, and community. Our mission is to deliver seamless and delightful online experiences!</p>
+      <a class="cta-btn" href="about.html">Learn More</a>
+    </div>
+  </div>
+  <script>
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById("password");
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>

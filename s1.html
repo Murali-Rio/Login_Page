@@ -1,0 +1,110 @@
+<style>
+    body {
+        background-image: url('img/layer-base.png');
+        background-size: cover;
+        min-height: 100vh;
+        font-family: 'Poppins', sans-serif;
+    }
+    nav {
+      background: rgba(20,20,40,0.88);
+      position: fixed; top:0; left:0; width:100%; z-index: 1000;
+      box-shadow: 0 2px 12px 0 rgba(23,23,45,0.09);
+    }
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+      padding: 18px 0 4px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none; color: #fff; padding: 9px 16px;
+      border-radius: 8px; transition: background 0.2s;
+      font-weight: 500;
+    }
+    nav ul li a:hover, nav ul li a.active { background: #ff2e63; }
+    .services-section {
+      margin: 85px auto 0 auto;
+      max-width: 900px;
+      padding: 38px 16px;
+      background: rgba(19,19,38,.64);
+      border-radius: 17px;
+      box-shadow: 0 8px 32px 0 #18122622;
+      text-align: center;
+    }
+    .services-section h1 { font-size: 2.2rem; margin-bottom: 6px; color: #ff2e63; }
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      margin-top: 36px;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.09);
+      border-radius: 11px;
+      padding: 25px 20px 22px;
+      box-shadow: 0 2px 8px #00000033;
+      min-width: 220px; max-width: 270px;
+      flex: 1 1 210px;
+      text-align: center;
+      transition: transform .12s;
+    }
+    .service-card:hover {
+      transform: scale(1.04) translateY(-6px);
+      background: rgba(255,46,99,0.12);
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 13px;
+      color: #ff2e63;
+    }
+    .service-title { font-size: 1.14rem; font-weight: 700; margin-bottom: 9px; color:#ff2e63; }
+    .service-desc { font-size: .94rem; color: #fbfbfb; }
+    @media (max-width: 700px) {
+      .services-list { flex-direction: column; gap: 20px; }
+      .service-card{ margin: 0 auto;} 
+    }
+</style>
+<body>
+    <nav>
+    <ul>
+      <li><a href="siginn.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="s1.html" class="active">Services</a></li>
+      <li><a href="c1.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="services-section">
+    <h1>Our Services</h1>
+    <p>From powerful solutions to creative design, we offer a range of services to help you succeed.</p>
+    <div class="services-list">
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <div class="service-title">Web Development</div>
+        <div class="service-desc">Custom, high-performance websites and web apps for your business needs.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <div class="service-title">UI/UX Design</div>
+        <div class="service-desc">Visually stunning, user-friendly designs for modern digital products.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <div class="service-title">Mobile Solutions</div>
+        <div class="service-desc">Innovative, responsive apps for all major mobile platforms.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <div class="service-title">Automation & Analytics</div>
+        <div class="service-desc">Streamline operations and gain insights with the latest automation tools.</div>
+      </div>
+    </div>
+  </div>
+</body>
